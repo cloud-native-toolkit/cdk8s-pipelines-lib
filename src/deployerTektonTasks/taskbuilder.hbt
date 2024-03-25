@@ -1,0 +1,33 @@
+export class {{normalizedTaskName}} extends TaskBuilder {
+  delegate: TaskBuilder;
+  public constructor(scope: Construct, id: string) {
+    super(scope, id);
+    this.delegate = new TaskBuilder(scope, id);
+    this.delegate.withName('{{task.metadata.name}}');
+    {{#each task.spec.workspaces}}
+    this.delegate.withWorkspace(new WorkspaceBuilder('{{this.name}}')
+      .withName('{{this.name}}')
+      .withDescription(`{{this.description}}`));
+    {{/each}}
+    {{#each task.spec.params}}
+    this.delegate.withStringParam(new ParameterBuilder('{{this.name}}')
+      .withDescription(`{{this.description}}`)
+      .withDefaultValue(`{{{variableEscape this.default}}}`)
+      .withPiplineParameter('{{this.name}}', `{{{variableEscape this.default}}}`));
+    {{/each}}
+    {{#each task.spec.steps}}
+    this.delegate.withStep(new TaskStepBuilder()
+      .withName('{{this.name}}')
+      .fromScriptData(`{{{variableEscape this.script}}}`)
+      .withWorkingDir('{{this.workingDir}}')
+      {{#if this.args}}
+      .withArgs(['{{this.args}}'])
+      {{/if}}
+      .withImage('{{this.image}}'));
+    {{/each}}
+  }
+
+  public buildTask(): void {
+    this.delegate.buildTask();
+  }
+}

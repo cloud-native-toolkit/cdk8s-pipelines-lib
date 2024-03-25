@@ -547,6 +547,562 @@ The personal access token (PAT) for accessing the library in GitHub.
 
 ## Classes <a name="Classes" id="Classes"></a>
 
+### ApplyOlmSubscription01 <a name="ApplyOlmSubscription01" id="cdk8s-pipelines-lib.ApplyOlmSubscription01"></a>
+
+#### Initializers <a name="Initializers" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.Initializer"></a>
+
+```typescript
+import { ApplyOlmSubscription01 } from 'cdk8s-pipelines-lib'
+
+new ApplyOlmSubscription01(scope: Construct, id: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription01.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription01.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription01.buildTask">buildTask</a></code> | Builds the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription01.withAnnotation">withAnnotation</a></code> | Adds an annotation to the `Task` `metadata` with the provided key and value. |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription01.withDescription">withDescription</a></code> | Sets the `description` of the `Task` being built. |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription01.withLabel">withLabel</a></code> | Adds a label to the `Task` with the provided label key and value. |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription01.withName">withName</a></code> | Sets the name of the `Task` being built. |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription01.withResult">withResult</a></code> | Allows you to add an result to the Task. |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription01.withStep">withStep</a></code> | Adds the given `step` (`TaskStepBuilder`) to the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription01.withStringParam">withStringParam</a></code> | Adds a parameter of type string to the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription01.withWorkspace">withWorkspace</a></code> | Adds the specified workspace to the `Task`. |
+
+---
+
+##### `buildTask` <a name="buildTask" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.buildTask"></a>
+
+```typescript
+public buildTask(): void
+```
+
+Builds the `Task`.
+
+##### `withAnnotation` <a name="withAnnotation" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.withAnnotation"></a>
+
+```typescript
+public withAnnotation(key: string, value: string): TaskBuilder
+```
+
+Adds an annotation to the `Task` `metadata` with the provided key and value.
+
+> [https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
+
+###### `key`<sup>Required</sup> <a name="key" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.withAnnotation.parameter.key"></a>
+
+- *Type:* string
+
+The annotation's key.
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.withAnnotation.parameter.value"></a>
+
+- *Type:* string
+
+The annotation's value.
+
+---
+
+##### `withDescription` <a name="withDescription" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.withDescription"></a>
+
+```typescript
+public withDescription(description: string): TaskBuilder
+```
+
+Sets the `description` of the `Task` being built.
+
+###### `description`<sup>Required</sup> <a name="description" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.withDescription.parameter.description"></a>
+
+- *Type:* string
+
+---
+
+##### `withLabel` <a name="withLabel" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.withLabel"></a>
+
+```typescript
+public withLabel(key: string, value: string): TaskBuilder
+```
+
+Adds a label to the `Task` with the provided label key and value.
+
+> [https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
+
+###### `key`<sup>Required</sup> <a name="key" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.withLabel.parameter.key"></a>
+
+- *Type:* string
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.withLabel.parameter.value"></a>
+
+- *Type:* string
+
+---
+
+##### `withName` <a name="withName" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.withName"></a>
+
+```typescript
+public withName(name: string): TaskBuilder
+```
+
+Sets the name of the `Task` being built.
+
+###### `name`<sup>Required</sup> <a name="name" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.withName.parameter.name"></a>
+
+- *Type:* string
+
+---
+
+##### `withResult` <a name="withResult" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.withResult"></a>
+
+```typescript
+public withResult(name: string, description: string): TaskBuilder
+```
+
+Allows you to add an result to the Task.
+
+> [https://tekton.dev/docs/pipelines/tasks/#emitting-results](https://tekton.dev/docs/pipelines/tasks/#emitting-results)
+
+###### `name`<sup>Required</sup> <a name="name" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.withResult.parameter.name"></a>
+
+- *Type:* string
+
+The name of the result.
+
+---
+
+###### `description`<sup>Required</sup> <a name="description" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.withResult.parameter.description"></a>
+
+- *Type:* string
+
+The result's description.
+
+---
+
+##### `withStep` <a name="withStep" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.withStep"></a>
+
+```typescript
+public withStep(step: TaskStepBuilder): TaskBuilder
+```
+
+Adds the given `step` (`TaskStepBuilder`) to the `Task`.
+
+###### `step`<sup>Required</sup> <a name="step" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.withStep.parameter.step"></a>
+
+- *Type:* cdk8s-pipelines.TaskStepBuilder
+
+---
+
+##### `withStringParam` <a name="withStringParam" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.withStringParam"></a>
+
+```typescript
+public withStringParam(param: ParameterBuilder): TaskBuilder
+```
+
+Adds a parameter of type string to the `Task`.
+
+###### `param`<sup>Required</sup> <a name="param" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.withStringParam.parameter.param"></a>
+
+- *Type:* cdk8s-pipelines.ParameterBuilder
+
+---
+
+##### `withWorkspace` <a name="withWorkspace" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.withWorkspace"></a>
+
+```typescript
+public withWorkspace(workspace: WorkspaceBuilder): TaskBuilder
+```
+
+Adds the specified workspace to the `Task`.
+
+###### `workspace`<sup>Required</sup> <a name="workspace" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.withWorkspace.parameter.workspace"></a>
+
+- *Type:* cdk8s-pipelines.WorkspaceBuilder
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription01.property.logicalID">logicalID</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription01.property.description">description</a></code> | <code>string</code> | Gets the `description` of the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription01.property.name">name</a></code> | <code>string</code> | Gets the name of the `Task` built by the `TaskBuilder`. |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription01.property.parameters">parameters</a></code> | <code>cdk8s-pipelines.ParameterBuilder[]</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription01.property.workspaces">workspaces</a></code> | <code>cdk8s-pipelines.WorkspaceBuilder[]</code> | Gets the workspaces for the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription01.property.delegate">delegate</a></code> | <code>cdk8s-pipelines.TaskBuilder</code> | *No description.* |
+
+---
+
+##### `logicalID`<sup>Required</sup> <a name="logicalID" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.property.logicalID"></a>
+
+```typescript
+public readonly logicalID: string;
+```
+
+- *Type:* string
+
+---
+
+##### `description`<sup>Optional</sup> <a name="description" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.property.description"></a>
+
+```typescript
+public readonly description: string;
+```
+
+- *Type:* string
+
+Gets the `description` of the `Task`.
+
+---
+
+##### `name`<sup>Optional</sup> <a name="name" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* string
+
+Gets the name of the `Task` built by the `TaskBuilder`.
+
+---
+
+##### `parameters`<sup>Optional</sup> <a name="parameters" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.property.parameters"></a>
+
+```typescript
+public readonly parameters: ParameterBuilder[];
+```
+
+- *Type:* cdk8s-pipelines.ParameterBuilder[]
+
+---
+
+##### `workspaces`<sup>Optional</sup> <a name="workspaces" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.property.workspaces"></a>
+
+```typescript
+public readonly workspaces: WorkspaceBuilder[];
+```
+
+- *Type:* cdk8s-pipelines.WorkspaceBuilder[]
+
+Gets the workspaces for the `Task`.
+
+---
+
+##### `delegate`<sup>Required</sup> <a name="delegate" id="cdk8s-pipelines-lib.ApplyOlmSubscription01.property.delegate"></a>
+
+```typescript
+public readonly delegate: TaskBuilder;
+```
+
+- *Type:* cdk8s-pipelines.TaskBuilder
+
+---
+
+
+### ApplyOlmSubscription02 <a name="ApplyOlmSubscription02" id="cdk8s-pipelines-lib.ApplyOlmSubscription02"></a>
+
+#### Initializers <a name="Initializers" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.Initializer"></a>
+
+```typescript
+import { ApplyOlmSubscription02 } from 'cdk8s-pipelines-lib'
+
+new ApplyOlmSubscription02(scope: Construct, id: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription02.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription02.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription02.buildTask">buildTask</a></code> | Builds the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription02.withAnnotation">withAnnotation</a></code> | Adds an annotation to the `Task` `metadata` with the provided key and value. |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription02.withDescription">withDescription</a></code> | Sets the `description` of the `Task` being built. |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription02.withLabel">withLabel</a></code> | Adds a label to the `Task` with the provided label key and value. |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription02.withName">withName</a></code> | Sets the name of the `Task` being built. |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription02.withResult">withResult</a></code> | Allows you to add an result to the Task. |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription02.withStep">withStep</a></code> | Adds the given `step` (`TaskStepBuilder`) to the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription02.withStringParam">withStringParam</a></code> | Adds a parameter of type string to the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription02.withWorkspace">withWorkspace</a></code> | Adds the specified workspace to the `Task`. |
+
+---
+
+##### `buildTask` <a name="buildTask" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.buildTask"></a>
+
+```typescript
+public buildTask(): void
+```
+
+Builds the `Task`.
+
+##### `withAnnotation` <a name="withAnnotation" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.withAnnotation"></a>
+
+```typescript
+public withAnnotation(key: string, value: string): TaskBuilder
+```
+
+Adds an annotation to the `Task` `metadata` with the provided key and value.
+
+> [https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
+
+###### `key`<sup>Required</sup> <a name="key" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.withAnnotation.parameter.key"></a>
+
+- *Type:* string
+
+The annotation's key.
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.withAnnotation.parameter.value"></a>
+
+- *Type:* string
+
+The annotation's value.
+
+---
+
+##### `withDescription` <a name="withDescription" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.withDescription"></a>
+
+```typescript
+public withDescription(description: string): TaskBuilder
+```
+
+Sets the `description` of the `Task` being built.
+
+###### `description`<sup>Required</sup> <a name="description" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.withDescription.parameter.description"></a>
+
+- *Type:* string
+
+---
+
+##### `withLabel` <a name="withLabel" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.withLabel"></a>
+
+```typescript
+public withLabel(key: string, value: string): TaskBuilder
+```
+
+Adds a label to the `Task` with the provided label key and value.
+
+> [https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
+
+###### `key`<sup>Required</sup> <a name="key" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.withLabel.parameter.key"></a>
+
+- *Type:* string
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.withLabel.parameter.value"></a>
+
+- *Type:* string
+
+---
+
+##### `withName` <a name="withName" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.withName"></a>
+
+```typescript
+public withName(name: string): TaskBuilder
+```
+
+Sets the name of the `Task` being built.
+
+###### `name`<sup>Required</sup> <a name="name" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.withName.parameter.name"></a>
+
+- *Type:* string
+
+---
+
+##### `withResult` <a name="withResult" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.withResult"></a>
+
+```typescript
+public withResult(name: string, description: string): TaskBuilder
+```
+
+Allows you to add an result to the Task.
+
+> [https://tekton.dev/docs/pipelines/tasks/#emitting-results](https://tekton.dev/docs/pipelines/tasks/#emitting-results)
+
+###### `name`<sup>Required</sup> <a name="name" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.withResult.parameter.name"></a>
+
+- *Type:* string
+
+The name of the result.
+
+---
+
+###### `description`<sup>Required</sup> <a name="description" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.withResult.parameter.description"></a>
+
+- *Type:* string
+
+The result's description.
+
+---
+
+##### `withStep` <a name="withStep" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.withStep"></a>
+
+```typescript
+public withStep(step: TaskStepBuilder): TaskBuilder
+```
+
+Adds the given `step` (`TaskStepBuilder`) to the `Task`.
+
+###### `step`<sup>Required</sup> <a name="step" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.withStep.parameter.step"></a>
+
+- *Type:* cdk8s-pipelines.TaskStepBuilder
+
+---
+
+##### `withStringParam` <a name="withStringParam" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.withStringParam"></a>
+
+```typescript
+public withStringParam(param: ParameterBuilder): TaskBuilder
+```
+
+Adds a parameter of type string to the `Task`.
+
+###### `param`<sup>Required</sup> <a name="param" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.withStringParam.parameter.param"></a>
+
+- *Type:* cdk8s-pipelines.ParameterBuilder
+
+---
+
+##### `withWorkspace` <a name="withWorkspace" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.withWorkspace"></a>
+
+```typescript
+public withWorkspace(workspace: WorkspaceBuilder): TaskBuilder
+```
+
+Adds the specified workspace to the `Task`.
+
+###### `workspace`<sup>Required</sup> <a name="workspace" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.withWorkspace.parameter.workspace"></a>
+
+- *Type:* cdk8s-pipelines.WorkspaceBuilder
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription02.property.logicalID">logicalID</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription02.property.description">description</a></code> | <code>string</code> | Gets the `description` of the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription02.property.name">name</a></code> | <code>string</code> | Gets the name of the `Task` built by the `TaskBuilder`. |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription02.property.parameters">parameters</a></code> | <code>cdk8s-pipelines.ParameterBuilder[]</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription02.property.workspaces">workspaces</a></code> | <code>cdk8s-pipelines.WorkspaceBuilder[]</code> | Gets the workspaces for the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.ApplyOlmSubscription02.property.delegate">delegate</a></code> | <code>cdk8s-pipelines.TaskBuilder</code> | *No description.* |
+
+---
+
+##### `logicalID`<sup>Required</sup> <a name="logicalID" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.property.logicalID"></a>
+
+```typescript
+public readonly logicalID: string;
+```
+
+- *Type:* string
+
+---
+
+##### `description`<sup>Optional</sup> <a name="description" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.property.description"></a>
+
+```typescript
+public readonly description: string;
+```
+
+- *Type:* string
+
+Gets the `description` of the `Task`.
+
+---
+
+##### `name`<sup>Optional</sup> <a name="name" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* string
+
+Gets the name of the `Task` built by the `TaskBuilder`.
+
+---
+
+##### `parameters`<sup>Optional</sup> <a name="parameters" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.property.parameters"></a>
+
+```typescript
+public readonly parameters: ParameterBuilder[];
+```
+
+- *Type:* cdk8s-pipelines.ParameterBuilder[]
+
+---
+
+##### `workspaces`<sup>Optional</sup> <a name="workspaces" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.property.workspaces"></a>
+
+```typescript
+public readonly workspaces: WorkspaceBuilder[];
+```
+
+- *Type:* cdk8s-pipelines.WorkspaceBuilder[]
+
+Gets the workspaces for the `Task`.
+
+---
+
+##### `delegate`<sup>Required</sup> <a name="delegate" id="cdk8s-pipelines-lib.ApplyOlmSubscription02.property.delegate"></a>
+
+```typescript
+public readonly delegate: TaskBuilder;
+```
+
+- *Type:* cdk8s-pipelines.TaskBuilder
+
+---
+
+
 ### AWSCDKPipeline <a name="AWSCDKPipeline" id="cdk8s-pipelines-lib.AWSCDKPipeline"></a>
 
 Creator for the AWSCDKPipelineChart.
@@ -589,6 +1145,1952 @@ Generates the AWS CDK Pipeline (AWSCDKPipelineChart) based on the actual project
 
 ---
 
+
+
+### CreateExternalSecrets01 <a name="CreateExternalSecrets01" id="cdk8s-pipelines-lib.CreateExternalSecrets01"></a>
+
+#### Initializers <a name="Initializers" id="cdk8s-pipelines-lib.CreateExternalSecrets01.Initializer"></a>
+
+```typescript
+import { CreateExternalSecrets01 } from 'cdk8s-pipelines-lib'
+
+new CreateExternalSecrets01(scope: Construct, id: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.CreateExternalSecrets01.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.CreateExternalSecrets01.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="cdk8s-pipelines-lib.CreateExternalSecrets01.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="cdk8s-pipelines-lib.CreateExternalSecrets01.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.CreateExternalSecrets01.buildTask">buildTask</a></code> | Builds the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.CreateExternalSecrets01.withAnnotation">withAnnotation</a></code> | Adds an annotation to the `Task` `metadata` with the provided key and value. |
+| <code><a href="#cdk8s-pipelines-lib.CreateExternalSecrets01.withDescription">withDescription</a></code> | Sets the `description` of the `Task` being built. |
+| <code><a href="#cdk8s-pipelines-lib.CreateExternalSecrets01.withLabel">withLabel</a></code> | Adds a label to the `Task` with the provided label key and value. |
+| <code><a href="#cdk8s-pipelines-lib.CreateExternalSecrets01.withName">withName</a></code> | Sets the name of the `Task` being built. |
+| <code><a href="#cdk8s-pipelines-lib.CreateExternalSecrets01.withResult">withResult</a></code> | Allows you to add an result to the Task. |
+| <code><a href="#cdk8s-pipelines-lib.CreateExternalSecrets01.withStep">withStep</a></code> | Adds the given `step` (`TaskStepBuilder`) to the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.CreateExternalSecrets01.withStringParam">withStringParam</a></code> | Adds a parameter of type string to the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.CreateExternalSecrets01.withWorkspace">withWorkspace</a></code> | Adds the specified workspace to the `Task`. |
+
+---
+
+##### `buildTask` <a name="buildTask" id="cdk8s-pipelines-lib.CreateExternalSecrets01.buildTask"></a>
+
+```typescript
+public buildTask(): void
+```
+
+Builds the `Task`.
+
+##### `withAnnotation` <a name="withAnnotation" id="cdk8s-pipelines-lib.CreateExternalSecrets01.withAnnotation"></a>
+
+```typescript
+public withAnnotation(key: string, value: string): TaskBuilder
+```
+
+Adds an annotation to the `Task` `metadata` with the provided key and value.
+
+> [https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
+
+###### `key`<sup>Required</sup> <a name="key" id="cdk8s-pipelines-lib.CreateExternalSecrets01.withAnnotation.parameter.key"></a>
+
+- *Type:* string
+
+The annotation's key.
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="cdk8s-pipelines-lib.CreateExternalSecrets01.withAnnotation.parameter.value"></a>
+
+- *Type:* string
+
+The annotation's value.
+
+---
+
+##### `withDescription` <a name="withDescription" id="cdk8s-pipelines-lib.CreateExternalSecrets01.withDescription"></a>
+
+```typescript
+public withDescription(description: string): TaskBuilder
+```
+
+Sets the `description` of the `Task` being built.
+
+###### `description`<sup>Required</sup> <a name="description" id="cdk8s-pipelines-lib.CreateExternalSecrets01.withDescription.parameter.description"></a>
+
+- *Type:* string
+
+---
+
+##### `withLabel` <a name="withLabel" id="cdk8s-pipelines-lib.CreateExternalSecrets01.withLabel"></a>
+
+```typescript
+public withLabel(key: string, value: string): TaskBuilder
+```
+
+Adds a label to the `Task` with the provided label key and value.
+
+> [https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
+
+###### `key`<sup>Required</sup> <a name="key" id="cdk8s-pipelines-lib.CreateExternalSecrets01.withLabel.parameter.key"></a>
+
+- *Type:* string
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="cdk8s-pipelines-lib.CreateExternalSecrets01.withLabel.parameter.value"></a>
+
+- *Type:* string
+
+---
+
+##### `withName` <a name="withName" id="cdk8s-pipelines-lib.CreateExternalSecrets01.withName"></a>
+
+```typescript
+public withName(name: string): TaskBuilder
+```
+
+Sets the name of the `Task` being built.
+
+###### `name`<sup>Required</sup> <a name="name" id="cdk8s-pipelines-lib.CreateExternalSecrets01.withName.parameter.name"></a>
+
+- *Type:* string
+
+---
+
+##### `withResult` <a name="withResult" id="cdk8s-pipelines-lib.CreateExternalSecrets01.withResult"></a>
+
+```typescript
+public withResult(name: string, description: string): TaskBuilder
+```
+
+Allows you to add an result to the Task.
+
+> [https://tekton.dev/docs/pipelines/tasks/#emitting-results](https://tekton.dev/docs/pipelines/tasks/#emitting-results)
+
+###### `name`<sup>Required</sup> <a name="name" id="cdk8s-pipelines-lib.CreateExternalSecrets01.withResult.parameter.name"></a>
+
+- *Type:* string
+
+The name of the result.
+
+---
+
+###### `description`<sup>Required</sup> <a name="description" id="cdk8s-pipelines-lib.CreateExternalSecrets01.withResult.parameter.description"></a>
+
+- *Type:* string
+
+The result's description.
+
+---
+
+##### `withStep` <a name="withStep" id="cdk8s-pipelines-lib.CreateExternalSecrets01.withStep"></a>
+
+```typescript
+public withStep(step: TaskStepBuilder): TaskBuilder
+```
+
+Adds the given `step` (`TaskStepBuilder`) to the `Task`.
+
+###### `step`<sup>Required</sup> <a name="step" id="cdk8s-pipelines-lib.CreateExternalSecrets01.withStep.parameter.step"></a>
+
+- *Type:* cdk8s-pipelines.TaskStepBuilder
+
+---
+
+##### `withStringParam` <a name="withStringParam" id="cdk8s-pipelines-lib.CreateExternalSecrets01.withStringParam"></a>
+
+```typescript
+public withStringParam(param: ParameterBuilder): TaskBuilder
+```
+
+Adds a parameter of type string to the `Task`.
+
+###### `param`<sup>Required</sup> <a name="param" id="cdk8s-pipelines-lib.CreateExternalSecrets01.withStringParam.parameter.param"></a>
+
+- *Type:* cdk8s-pipelines.ParameterBuilder
+
+---
+
+##### `withWorkspace` <a name="withWorkspace" id="cdk8s-pipelines-lib.CreateExternalSecrets01.withWorkspace"></a>
+
+```typescript
+public withWorkspace(workspace: WorkspaceBuilder): TaskBuilder
+```
+
+Adds the specified workspace to the `Task`.
+
+###### `workspace`<sup>Required</sup> <a name="workspace" id="cdk8s-pipelines-lib.CreateExternalSecrets01.withWorkspace.parameter.workspace"></a>
+
+- *Type:* cdk8s-pipelines.WorkspaceBuilder
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.CreateExternalSecrets01.property.logicalID">logicalID</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.CreateExternalSecrets01.property.description">description</a></code> | <code>string</code> | Gets the `description` of the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.CreateExternalSecrets01.property.name">name</a></code> | <code>string</code> | Gets the name of the `Task` built by the `TaskBuilder`. |
+| <code><a href="#cdk8s-pipelines-lib.CreateExternalSecrets01.property.parameters">parameters</a></code> | <code>cdk8s-pipelines.ParameterBuilder[]</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.CreateExternalSecrets01.property.workspaces">workspaces</a></code> | <code>cdk8s-pipelines.WorkspaceBuilder[]</code> | Gets the workspaces for the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.CreateExternalSecrets01.property.delegate">delegate</a></code> | <code>cdk8s-pipelines.TaskBuilder</code> | *No description.* |
+
+---
+
+##### `logicalID`<sup>Required</sup> <a name="logicalID" id="cdk8s-pipelines-lib.CreateExternalSecrets01.property.logicalID"></a>
+
+```typescript
+public readonly logicalID: string;
+```
+
+- *Type:* string
+
+---
+
+##### `description`<sup>Optional</sup> <a name="description" id="cdk8s-pipelines-lib.CreateExternalSecrets01.property.description"></a>
+
+```typescript
+public readonly description: string;
+```
+
+- *Type:* string
+
+Gets the `description` of the `Task`.
+
+---
+
+##### `name`<sup>Optional</sup> <a name="name" id="cdk8s-pipelines-lib.CreateExternalSecrets01.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* string
+
+Gets the name of the `Task` built by the `TaskBuilder`.
+
+---
+
+##### `parameters`<sup>Optional</sup> <a name="parameters" id="cdk8s-pipelines-lib.CreateExternalSecrets01.property.parameters"></a>
+
+```typescript
+public readonly parameters: ParameterBuilder[];
+```
+
+- *Type:* cdk8s-pipelines.ParameterBuilder[]
+
+---
+
+##### `workspaces`<sup>Optional</sup> <a name="workspaces" id="cdk8s-pipelines-lib.CreateExternalSecrets01.property.workspaces"></a>
+
+```typescript
+public readonly workspaces: WorkspaceBuilder[];
+```
+
+- *Type:* cdk8s-pipelines.WorkspaceBuilder[]
+
+Gets the workspaces for the `Task`.
+
+---
+
+##### `delegate`<sup>Required</sup> <a name="delegate" id="cdk8s-pipelines-lib.CreateExternalSecrets01.property.delegate"></a>
+
+```typescript
+public readonly delegate: TaskBuilder;
+```
+
+- *Type:* cdk8s-pipelines.TaskBuilder
+
+---
+
+
+### IbmcloudSecretsManagerGet01 <a name="IbmcloudSecretsManagerGet01" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01"></a>
+
+#### Initializers <a name="Initializers" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.Initializer"></a>
+
+```typescript
+import { IbmcloudSecretsManagerGet01 } from 'cdk8s-pipelines-lib'
+
+new IbmcloudSecretsManagerGet01(scope: Construct, id: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.buildTask">buildTask</a></code> | Builds the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withAnnotation">withAnnotation</a></code> | Adds an annotation to the `Task` `metadata` with the provided key and value. |
+| <code><a href="#cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withDescription">withDescription</a></code> | Sets the `description` of the `Task` being built. |
+| <code><a href="#cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withLabel">withLabel</a></code> | Adds a label to the `Task` with the provided label key and value. |
+| <code><a href="#cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withName">withName</a></code> | Sets the name of the `Task` being built. |
+| <code><a href="#cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withResult">withResult</a></code> | Allows you to add an result to the Task. |
+| <code><a href="#cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withStep">withStep</a></code> | Adds the given `step` (`TaskStepBuilder`) to the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withStringParam">withStringParam</a></code> | Adds a parameter of type string to the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withWorkspace">withWorkspace</a></code> | Adds the specified workspace to the `Task`. |
+
+---
+
+##### `buildTask` <a name="buildTask" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.buildTask"></a>
+
+```typescript
+public buildTask(): void
+```
+
+Builds the `Task`.
+
+##### `withAnnotation` <a name="withAnnotation" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withAnnotation"></a>
+
+```typescript
+public withAnnotation(key: string, value: string): TaskBuilder
+```
+
+Adds an annotation to the `Task` `metadata` with the provided key and value.
+
+> [https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
+
+###### `key`<sup>Required</sup> <a name="key" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withAnnotation.parameter.key"></a>
+
+- *Type:* string
+
+The annotation's key.
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withAnnotation.parameter.value"></a>
+
+- *Type:* string
+
+The annotation's value.
+
+---
+
+##### `withDescription` <a name="withDescription" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withDescription"></a>
+
+```typescript
+public withDescription(description: string): TaskBuilder
+```
+
+Sets the `description` of the `Task` being built.
+
+###### `description`<sup>Required</sup> <a name="description" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withDescription.parameter.description"></a>
+
+- *Type:* string
+
+---
+
+##### `withLabel` <a name="withLabel" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withLabel"></a>
+
+```typescript
+public withLabel(key: string, value: string): TaskBuilder
+```
+
+Adds a label to the `Task` with the provided label key and value.
+
+> [https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
+
+###### `key`<sup>Required</sup> <a name="key" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withLabel.parameter.key"></a>
+
+- *Type:* string
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withLabel.parameter.value"></a>
+
+- *Type:* string
+
+---
+
+##### `withName` <a name="withName" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withName"></a>
+
+```typescript
+public withName(name: string): TaskBuilder
+```
+
+Sets the name of the `Task` being built.
+
+###### `name`<sup>Required</sup> <a name="name" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withName.parameter.name"></a>
+
+- *Type:* string
+
+---
+
+##### `withResult` <a name="withResult" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withResult"></a>
+
+```typescript
+public withResult(name: string, description: string): TaskBuilder
+```
+
+Allows you to add an result to the Task.
+
+> [https://tekton.dev/docs/pipelines/tasks/#emitting-results](https://tekton.dev/docs/pipelines/tasks/#emitting-results)
+
+###### `name`<sup>Required</sup> <a name="name" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withResult.parameter.name"></a>
+
+- *Type:* string
+
+The name of the result.
+
+---
+
+###### `description`<sup>Required</sup> <a name="description" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withResult.parameter.description"></a>
+
+- *Type:* string
+
+The result's description.
+
+---
+
+##### `withStep` <a name="withStep" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withStep"></a>
+
+```typescript
+public withStep(step: TaskStepBuilder): TaskBuilder
+```
+
+Adds the given `step` (`TaskStepBuilder`) to the `Task`.
+
+###### `step`<sup>Required</sup> <a name="step" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withStep.parameter.step"></a>
+
+- *Type:* cdk8s-pipelines.TaskStepBuilder
+
+---
+
+##### `withStringParam` <a name="withStringParam" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withStringParam"></a>
+
+```typescript
+public withStringParam(param: ParameterBuilder): TaskBuilder
+```
+
+Adds a parameter of type string to the `Task`.
+
+###### `param`<sup>Required</sup> <a name="param" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withStringParam.parameter.param"></a>
+
+- *Type:* cdk8s-pipelines.ParameterBuilder
+
+---
+
+##### `withWorkspace` <a name="withWorkspace" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withWorkspace"></a>
+
+```typescript
+public withWorkspace(workspace: WorkspaceBuilder): TaskBuilder
+```
+
+Adds the specified workspace to the `Task`.
+
+###### `workspace`<sup>Required</sup> <a name="workspace" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.withWorkspace.parameter.workspace"></a>
+
+- *Type:* cdk8s-pipelines.WorkspaceBuilder
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.property.logicalID">logicalID</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.property.description">description</a></code> | <code>string</code> | Gets the `description` of the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.property.name">name</a></code> | <code>string</code> | Gets the name of the `Task` built by the `TaskBuilder`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.property.parameters">parameters</a></code> | <code>cdk8s-pipelines.ParameterBuilder[]</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.property.workspaces">workspaces</a></code> | <code>cdk8s-pipelines.WorkspaceBuilder[]</code> | Gets the workspaces for the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.property.delegate">delegate</a></code> | <code>cdk8s-pipelines.TaskBuilder</code> | *No description.* |
+
+---
+
+##### `logicalID`<sup>Required</sup> <a name="logicalID" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.property.logicalID"></a>
+
+```typescript
+public readonly logicalID: string;
+```
+
+- *Type:* string
+
+---
+
+##### `description`<sup>Optional</sup> <a name="description" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.property.description"></a>
+
+```typescript
+public readonly description: string;
+```
+
+- *Type:* string
+
+Gets the `description` of the `Task`.
+
+---
+
+##### `name`<sup>Optional</sup> <a name="name" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* string
+
+Gets the name of the `Task` built by the `TaskBuilder`.
+
+---
+
+##### `parameters`<sup>Optional</sup> <a name="parameters" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.property.parameters"></a>
+
+```typescript
+public readonly parameters: ParameterBuilder[];
+```
+
+- *Type:* cdk8s-pipelines.ParameterBuilder[]
+
+---
+
+##### `workspaces`<sup>Optional</sup> <a name="workspaces" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.property.workspaces"></a>
+
+```typescript
+public readonly workspaces: WorkspaceBuilder[];
+```
+
+- *Type:* cdk8s-pipelines.WorkspaceBuilder[]
+
+Gets the workspaces for the `Task`.
+
+---
+
+##### `delegate`<sup>Required</sup> <a name="delegate" id="cdk8s-pipelines-lib.IbmcloudSecretsManagerGet01.property.delegate"></a>
+
+```typescript
+public readonly delegate: TaskBuilder;
+```
+
+- *Type:* cdk8s-pipelines.TaskBuilder
+
+---
+
+
+### IbmLakehouseManage01 <a name="IbmLakehouseManage01" id="cdk8s-pipelines-lib.IbmLakehouseManage01"></a>
+
+#### Initializers <a name="Initializers" id="cdk8s-pipelines-lib.IbmLakehouseManage01.Initializer"></a>
+
+```typescript
+import { IbmLakehouseManage01 } from 'cdk8s-pipelines-lib'
+
+new IbmLakehouseManage01(scope: Construct, id: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.IbmLakehouseManage01.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.IbmLakehouseManage01.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="cdk8s-pipelines-lib.IbmLakehouseManage01.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="cdk8s-pipelines-lib.IbmLakehouseManage01.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.IbmLakehouseManage01.buildTask">buildTask</a></code> | Builds the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmLakehouseManage01.withAnnotation">withAnnotation</a></code> | Adds an annotation to the `Task` `metadata` with the provided key and value. |
+| <code><a href="#cdk8s-pipelines-lib.IbmLakehouseManage01.withDescription">withDescription</a></code> | Sets the `description` of the `Task` being built. |
+| <code><a href="#cdk8s-pipelines-lib.IbmLakehouseManage01.withLabel">withLabel</a></code> | Adds a label to the `Task` with the provided label key and value. |
+| <code><a href="#cdk8s-pipelines-lib.IbmLakehouseManage01.withName">withName</a></code> | Sets the name of the `Task` being built. |
+| <code><a href="#cdk8s-pipelines-lib.IbmLakehouseManage01.withResult">withResult</a></code> | Allows you to add an result to the Task. |
+| <code><a href="#cdk8s-pipelines-lib.IbmLakehouseManage01.withStep">withStep</a></code> | Adds the given `step` (`TaskStepBuilder`) to the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmLakehouseManage01.withStringParam">withStringParam</a></code> | Adds a parameter of type string to the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmLakehouseManage01.withWorkspace">withWorkspace</a></code> | Adds the specified workspace to the `Task`. |
+
+---
+
+##### `buildTask` <a name="buildTask" id="cdk8s-pipelines-lib.IbmLakehouseManage01.buildTask"></a>
+
+```typescript
+public buildTask(): void
+```
+
+Builds the `Task`.
+
+##### `withAnnotation` <a name="withAnnotation" id="cdk8s-pipelines-lib.IbmLakehouseManage01.withAnnotation"></a>
+
+```typescript
+public withAnnotation(key: string, value: string): TaskBuilder
+```
+
+Adds an annotation to the `Task` `metadata` with the provided key and value.
+
+> [https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
+
+###### `key`<sup>Required</sup> <a name="key" id="cdk8s-pipelines-lib.IbmLakehouseManage01.withAnnotation.parameter.key"></a>
+
+- *Type:* string
+
+The annotation's key.
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="cdk8s-pipelines-lib.IbmLakehouseManage01.withAnnotation.parameter.value"></a>
+
+- *Type:* string
+
+The annotation's value.
+
+---
+
+##### `withDescription` <a name="withDescription" id="cdk8s-pipelines-lib.IbmLakehouseManage01.withDescription"></a>
+
+```typescript
+public withDescription(description: string): TaskBuilder
+```
+
+Sets the `description` of the `Task` being built.
+
+###### `description`<sup>Required</sup> <a name="description" id="cdk8s-pipelines-lib.IbmLakehouseManage01.withDescription.parameter.description"></a>
+
+- *Type:* string
+
+---
+
+##### `withLabel` <a name="withLabel" id="cdk8s-pipelines-lib.IbmLakehouseManage01.withLabel"></a>
+
+```typescript
+public withLabel(key: string, value: string): TaskBuilder
+```
+
+Adds a label to the `Task` with the provided label key and value.
+
+> [https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
+
+###### `key`<sup>Required</sup> <a name="key" id="cdk8s-pipelines-lib.IbmLakehouseManage01.withLabel.parameter.key"></a>
+
+- *Type:* string
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="cdk8s-pipelines-lib.IbmLakehouseManage01.withLabel.parameter.value"></a>
+
+- *Type:* string
+
+---
+
+##### `withName` <a name="withName" id="cdk8s-pipelines-lib.IbmLakehouseManage01.withName"></a>
+
+```typescript
+public withName(name: string): TaskBuilder
+```
+
+Sets the name of the `Task` being built.
+
+###### `name`<sup>Required</sup> <a name="name" id="cdk8s-pipelines-lib.IbmLakehouseManage01.withName.parameter.name"></a>
+
+- *Type:* string
+
+---
+
+##### `withResult` <a name="withResult" id="cdk8s-pipelines-lib.IbmLakehouseManage01.withResult"></a>
+
+```typescript
+public withResult(name: string, description: string): TaskBuilder
+```
+
+Allows you to add an result to the Task.
+
+> [https://tekton.dev/docs/pipelines/tasks/#emitting-results](https://tekton.dev/docs/pipelines/tasks/#emitting-results)
+
+###### `name`<sup>Required</sup> <a name="name" id="cdk8s-pipelines-lib.IbmLakehouseManage01.withResult.parameter.name"></a>
+
+- *Type:* string
+
+The name of the result.
+
+---
+
+###### `description`<sup>Required</sup> <a name="description" id="cdk8s-pipelines-lib.IbmLakehouseManage01.withResult.parameter.description"></a>
+
+- *Type:* string
+
+The result's description.
+
+---
+
+##### `withStep` <a name="withStep" id="cdk8s-pipelines-lib.IbmLakehouseManage01.withStep"></a>
+
+```typescript
+public withStep(step: TaskStepBuilder): TaskBuilder
+```
+
+Adds the given `step` (`TaskStepBuilder`) to the `Task`.
+
+###### `step`<sup>Required</sup> <a name="step" id="cdk8s-pipelines-lib.IbmLakehouseManage01.withStep.parameter.step"></a>
+
+- *Type:* cdk8s-pipelines.TaskStepBuilder
+
+---
+
+##### `withStringParam` <a name="withStringParam" id="cdk8s-pipelines-lib.IbmLakehouseManage01.withStringParam"></a>
+
+```typescript
+public withStringParam(param: ParameterBuilder): TaskBuilder
+```
+
+Adds a parameter of type string to the `Task`.
+
+###### `param`<sup>Required</sup> <a name="param" id="cdk8s-pipelines-lib.IbmLakehouseManage01.withStringParam.parameter.param"></a>
+
+- *Type:* cdk8s-pipelines.ParameterBuilder
+
+---
+
+##### `withWorkspace` <a name="withWorkspace" id="cdk8s-pipelines-lib.IbmLakehouseManage01.withWorkspace"></a>
+
+```typescript
+public withWorkspace(workspace: WorkspaceBuilder): TaskBuilder
+```
+
+Adds the specified workspace to the `Task`.
+
+###### `workspace`<sup>Required</sup> <a name="workspace" id="cdk8s-pipelines-lib.IbmLakehouseManage01.withWorkspace.parameter.workspace"></a>
+
+- *Type:* cdk8s-pipelines.WorkspaceBuilder
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.IbmLakehouseManage01.property.logicalID">logicalID</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.IbmLakehouseManage01.property.description">description</a></code> | <code>string</code> | Gets the `description` of the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmLakehouseManage01.property.name">name</a></code> | <code>string</code> | Gets the name of the `Task` built by the `TaskBuilder`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmLakehouseManage01.property.parameters">parameters</a></code> | <code>cdk8s-pipelines.ParameterBuilder[]</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.IbmLakehouseManage01.property.workspaces">workspaces</a></code> | <code>cdk8s-pipelines.WorkspaceBuilder[]</code> | Gets the workspaces for the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmLakehouseManage01.property.delegate">delegate</a></code> | <code>cdk8s-pipelines.TaskBuilder</code> | *No description.* |
+
+---
+
+##### `logicalID`<sup>Required</sup> <a name="logicalID" id="cdk8s-pipelines-lib.IbmLakehouseManage01.property.logicalID"></a>
+
+```typescript
+public readonly logicalID: string;
+```
+
+- *Type:* string
+
+---
+
+##### `description`<sup>Optional</sup> <a name="description" id="cdk8s-pipelines-lib.IbmLakehouseManage01.property.description"></a>
+
+```typescript
+public readonly description: string;
+```
+
+- *Type:* string
+
+Gets the `description` of the `Task`.
+
+---
+
+##### `name`<sup>Optional</sup> <a name="name" id="cdk8s-pipelines-lib.IbmLakehouseManage01.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* string
+
+Gets the name of the `Task` built by the `TaskBuilder`.
+
+---
+
+##### `parameters`<sup>Optional</sup> <a name="parameters" id="cdk8s-pipelines-lib.IbmLakehouseManage01.property.parameters"></a>
+
+```typescript
+public readonly parameters: ParameterBuilder[];
+```
+
+- *Type:* cdk8s-pipelines.ParameterBuilder[]
+
+---
+
+##### `workspaces`<sup>Optional</sup> <a name="workspaces" id="cdk8s-pipelines-lib.IbmLakehouseManage01.property.workspaces"></a>
+
+```typescript
+public readonly workspaces: WorkspaceBuilder[];
+```
+
+- *Type:* cdk8s-pipelines.WorkspaceBuilder[]
+
+Gets the workspaces for the `Task`.
+
+---
+
+##### `delegate`<sup>Required</sup> <a name="delegate" id="cdk8s-pipelines-lib.IbmLakehouseManage01.property.delegate"></a>
+
+```typescript
+public readonly delegate: TaskBuilder;
+```
+
+- *Type:* cdk8s-pipelines.TaskBuilder
+
+---
+
+
+### IbmPak01 <a name="IbmPak01" id="cdk8s-pipelines-lib.IbmPak01"></a>
+
+#### Initializers <a name="Initializers" id="cdk8s-pipelines-lib.IbmPak01.Initializer"></a>
+
+```typescript
+import { IbmPak01 } from 'cdk8s-pipelines-lib'
+
+new IbmPak01(scope: Construct, id: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak01.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak01.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="cdk8s-pipelines-lib.IbmPak01.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="cdk8s-pipelines-lib.IbmPak01.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak01.buildTask">buildTask</a></code> | Builds the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak01.withAnnotation">withAnnotation</a></code> | Adds an annotation to the `Task` `metadata` with the provided key and value. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak01.withDescription">withDescription</a></code> | Sets the `description` of the `Task` being built. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak01.withLabel">withLabel</a></code> | Adds a label to the `Task` with the provided label key and value. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak01.withName">withName</a></code> | Sets the name of the `Task` being built. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak01.withResult">withResult</a></code> | Allows you to add an result to the Task. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak01.withStep">withStep</a></code> | Adds the given `step` (`TaskStepBuilder`) to the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak01.withStringParam">withStringParam</a></code> | Adds a parameter of type string to the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak01.withWorkspace">withWorkspace</a></code> | Adds the specified workspace to the `Task`. |
+
+---
+
+##### `buildTask` <a name="buildTask" id="cdk8s-pipelines-lib.IbmPak01.buildTask"></a>
+
+```typescript
+public buildTask(): void
+```
+
+Builds the `Task`.
+
+##### `withAnnotation` <a name="withAnnotation" id="cdk8s-pipelines-lib.IbmPak01.withAnnotation"></a>
+
+```typescript
+public withAnnotation(key: string, value: string): TaskBuilder
+```
+
+Adds an annotation to the `Task` `metadata` with the provided key and value.
+
+> [https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
+
+###### `key`<sup>Required</sup> <a name="key" id="cdk8s-pipelines-lib.IbmPak01.withAnnotation.parameter.key"></a>
+
+- *Type:* string
+
+The annotation's key.
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="cdk8s-pipelines-lib.IbmPak01.withAnnotation.parameter.value"></a>
+
+- *Type:* string
+
+The annotation's value.
+
+---
+
+##### `withDescription` <a name="withDescription" id="cdk8s-pipelines-lib.IbmPak01.withDescription"></a>
+
+```typescript
+public withDescription(description: string): TaskBuilder
+```
+
+Sets the `description` of the `Task` being built.
+
+###### `description`<sup>Required</sup> <a name="description" id="cdk8s-pipelines-lib.IbmPak01.withDescription.parameter.description"></a>
+
+- *Type:* string
+
+---
+
+##### `withLabel` <a name="withLabel" id="cdk8s-pipelines-lib.IbmPak01.withLabel"></a>
+
+```typescript
+public withLabel(key: string, value: string): TaskBuilder
+```
+
+Adds a label to the `Task` with the provided label key and value.
+
+> [https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
+
+###### `key`<sup>Required</sup> <a name="key" id="cdk8s-pipelines-lib.IbmPak01.withLabel.parameter.key"></a>
+
+- *Type:* string
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="cdk8s-pipelines-lib.IbmPak01.withLabel.parameter.value"></a>
+
+- *Type:* string
+
+---
+
+##### `withName` <a name="withName" id="cdk8s-pipelines-lib.IbmPak01.withName"></a>
+
+```typescript
+public withName(name: string): TaskBuilder
+```
+
+Sets the name of the `Task` being built.
+
+###### `name`<sup>Required</sup> <a name="name" id="cdk8s-pipelines-lib.IbmPak01.withName.parameter.name"></a>
+
+- *Type:* string
+
+---
+
+##### `withResult` <a name="withResult" id="cdk8s-pipelines-lib.IbmPak01.withResult"></a>
+
+```typescript
+public withResult(name: string, description: string): TaskBuilder
+```
+
+Allows you to add an result to the Task.
+
+> [https://tekton.dev/docs/pipelines/tasks/#emitting-results](https://tekton.dev/docs/pipelines/tasks/#emitting-results)
+
+###### `name`<sup>Required</sup> <a name="name" id="cdk8s-pipelines-lib.IbmPak01.withResult.parameter.name"></a>
+
+- *Type:* string
+
+The name of the result.
+
+---
+
+###### `description`<sup>Required</sup> <a name="description" id="cdk8s-pipelines-lib.IbmPak01.withResult.parameter.description"></a>
+
+- *Type:* string
+
+The result's description.
+
+---
+
+##### `withStep` <a name="withStep" id="cdk8s-pipelines-lib.IbmPak01.withStep"></a>
+
+```typescript
+public withStep(step: TaskStepBuilder): TaskBuilder
+```
+
+Adds the given `step` (`TaskStepBuilder`) to the `Task`.
+
+###### `step`<sup>Required</sup> <a name="step" id="cdk8s-pipelines-lib.IbmPak01.withStep.parameter.step"></a>
+
+- *Type:* cdk8s-pipelines.TaskStepBuilder
+
+---
+
+##### `withStringParam` <a name="withStringParam" id="cdk8s-pipelines-lib.IbmPak01.withStringParam"></a>
+
+```typescript
+public withStringParam(param: ParameterBuilder): TaskBuilder
+```
+
+Adds a parameter of type string to the `Task`.
+
+###### `param`<sup>Required</sup> <a name="param" id="cdk8s-pipelines-lib.IbmPak01.withStringParam.parameter.param"></a>
+
+- *Type:* cdk8s-pipelines.ParameterBuilder
+
+---
+
+##### `withWorkspace` <a name="withWorkspace" id="cdk8s-pipelines-lib.IbmPak01.withWorkspace"></a>
+
+```typescript
+public withWorkspace(workspace: WorkspaceBuilder): TaskBuilder
+```
+
+Adds the specified workspace to the `Task`.
+
+###### `workspace`<sup>Required</sup> <a name="workspace" id="cdk8s-pipelines-lib.IbmPak01.withWorkspace.parameter.workspace"></a>
+
+- *Type:* cdk8s-pipelines.WorkspaceBuilder
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak01.property.logicalID">logicalID</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak01.property.description">description</a></code> | <code>string</code> | Gets the `description` of the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak01.property.name">name</a></code> | <code>string</code> | Gets the name of the `Task` built by the `TaskBuilder`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak01.property.parameters">parameters</a></code> | <code>cdk8s-pipelines.ParameterBuilder[]</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak01.property.workspaces">workspaces</a></code> | <code>cdk8s-pipelines.WorkspaceBuilder[]</code> | Gets the workspaces for the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak01.property.delegate">delegate</a></code> | <code>cdk8s-pipelines.TaskBuilder</code> | *No description.* |
+
+---
+
+##### `logicalID`<sup>Required</sup> <a name="logicalID" id="cdk8s-pipelines-lib.IbmPak01.property.logicalID"></a>
+
+```typescript
+public readonly logicalID: string;
+```
+
+- *Type:* string
+
+---
+
+##### `description`<sup>Optional</sup> <a name="description" id="cdk8s-pipelines-lib.IbmPak01.property.description"></a>
+
+```typescript
+public readonly description: string;
+```
+
+- *Type:* string
+
+Gets the `description` of the `Task`.
+
+---
+
+##### `name`<sup>Optional</sup> <a name="name" id="cdk8s-pipelines-lib.IbmPak01.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* string
+
+Gets the name of the `Task` built by the `TaskBuilder`.
+
+---
+
+##### `parameters`<sup>Optional</sup> <a name="parameters" id="cdk8s-pipelines-lib.IbmPak01.property.parameters"></a>
+
+```typescript
+public readonly parameters: ParameterBuilder[];
+```
+
+- *Type:* cdk8s-pipelines.ParameterBuilder[]
+
+---
+
+##### `workspaces`<sup>Optional</sup> <a name="workspaces" id="cdk8s-pipelines-lib.IbmPak01.property.workspaces"></a>
+
+```typescript
+public readonly workspaces: WorkspaceBuilder[];
+```
+
+- *Type:* cdk8s-pipelines.WorkspaceBuilder[]
+
+Gets the workspaces for the `Task`.
+
+---
+
+##### `delegate`<sup>Required</sup> <a name="delegate" id="cdk8s-pipelines-lib.IbmPak01.property.delegate"></a>
+
+```typescript
+public readonly delegate: TaskBuilder;
+```
+
+- *Type:* cdk8s-pipelines.TaskBuilder
+
+---
+
+
+### IbmPak02 <a name="IbmPak02" id="cdk8s-pipelines-lib.IbmPak02"></a>
+
+#### Initializers <a name="Initializers" id="cdk8s-pipelines-lib.IbmPak02.Initializer"></a>
+
+```typescript
+import { IbmPak02 } from 'cdk8s-pipelines-lib'
+
+new IbmPak02(scope: Construct, id: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak02.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak02.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="cdk8s-pipelines-lib.IbmPak02.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="cdk8s-pipelines-lib.IbmPak02.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak02.buildTask">buildTask</a></code> | Builds the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak02.withAnnotation">withAnnotation</a></code> | Adds an annotation to the `Task` `metadata` with the provided key and value. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak02.withDescription">withDescription</a></code> | Sets the `description` of the `Task` being built. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak02.withLabel">withLabel</a></code> | Adds a label to the `Task` with the provided label key and value. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak02.withName">withName</a></code> | Sets the name of the `Task` being built. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak02.withResult">withResult</a></code> | Allows you to add an result to the Task. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak02.withStep">withStep</a></code> | Adds the given `step` (`TaskStepBuilder`) to the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak02.withStringParam">withStringParam</a></code> | Adds a parameter of type string to the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak02.withWorkspace">withWorkspace</a></code> | Adds the specified workspace to the `Task`. |
+
+---
+
+##### `buildTask` <a name="buildTask" id="cdk8s-pipelines-lib.IbmPak02.buildTask"></a>
+
+```typescript
+public buildTask(): void
+```
+
+Builds the `Task`.
+
+##### `withAnnotation` <a name="withAnnotation" id="cdk8s-pipelines-lib.IbmPak02.withAnnotation"></a>
+
+```typescript
+public withAnnotation(key: string, value: string): TaskBuilder
+```
+
+Adds an annotation to the `Task` `metadata` with the provided key and value.
+
+> [https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
+
+###### `key`<sup>Required</sup> <a name="key" id="cdk8s-pipelines-lib.IbmPak02.withAnnotation.parameter.key"></a>
+
+- *Type:* string
+
+The annotation's key.
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="cdk8s-pipelines-lib.IbmPak02.withAnnotation.parameter.value"></a>
+
+- *Type:* string
+
+The annotation's value.
+
+---
+
+##### `withDescription` <a name="withDescription" id="cdk8s-pipelines-lib.IbmPak02.withDescription"></a>
+
+```typescript
+public withDescription(description: string): TaskBuilder
+```
+
+Sets the `description` of the `Task` being built.
+
+###### `description`<sup>Required</sup> <a name="description" id="cdk8s-pipelines-lib.IbmPak02.withDescription.parameter.description"></a>
+
+- *Type:* string
+
+---
+
+##### `withLabel` <a name="withLabel" id="cdk8s-pipelines-lib.IbmPak02.withLabel"></a>
+
+```typescript
+public withLabel(key: string, value: string): TaskBuilder
+```
+
+Adds a label to the `Task` with the provided label key and value.
+
+> [https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
+
+###### `key`<sup>Required</sup> <a name="key" id="cdk8s-pipelines-lib.IbmPak02.withLabel.parameter.key"></a>
+
+- *Type:* string
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="cdk8s-pipelines-lib.IbmPak02.withLabel.parameter.value"></a>
+
+- *Type:* string
+
+---
+
+##### `withName` <a name="withName" id="cdk8s-pipelines-lib.IbmPak02.withName"></a>
+
+```typescript
+public withName(name: string): TaskBuilder
+```
+
+Sets the name of the `Task` being built.
+
+###### `name`<sup>Required</sup> <a name="name" id="cdk8s-pipelines-lib.IbmPak02.withName.parameter.name"></a>
+
+- *Type:* string
+
+---
+
+##### `withResult` <a name="withResult" id="cdk8s-pipelines-lib.IbmPak02.withResult"></a>
+
+```typescript
+public withResult(name: string, description: string): TaskBuilder
+```
+
+Allows you to add an result to the Task.
+
+> [https://tekton.dev/docs/pipelines/tasks/#emitting-results](https://tekton.dev/docs/pipelines/tasks/#emitting-results)
+
+###### `name`<sup>Required</sup> <a name="name" id="cdk8s-pipelines-lib.IbmPak02.withResult.parameter.name"></a>
+
+- *Type:* string
+
+The name of the result.
+
+---
+
+###### `description`<sup>Required</sup> <a name="description" id="cdk8s-pipelines-lib.IbmPak02.withResult.parameter.description"></a>
+
+- *Type:* string
+
+The result's description.
+
+---
+
+##### `withStep` <a name="withStep" id="cdk8s-pipelines-lib.IbmPak02.withStep"></a>
+
+```typescript
+public withStep(step: TaskStepBuilder): TaskBuilder
+```
+
+Adds the given `step` (`TaskStepBuilder`) to the `Task`.
+
+###### `step`<sup>Required</sup> <a name="step" id="cdk8s-pipelines-lib.IbmPak02.withStep.parameter.step"></a>
+
+- *Type:* cdk8s-pipelines.TaskStepBuilder
+
+---
+
+##### `withStringParam` <a name="withStringParam" id="cdk8s-pipelines-lib.IbmPak02.withStringParam"></a>
+
+```typescript
+public withStringParam(param: ParameterBuilder): TaskBuilder
+```
+
+Adds a parameter of type string to the `Task`.
+
+###### `param`<sup>Required</sup> <a name="param" id="cdk8s-pipelines-lib.IbmPak02.withStringParam.parameter.param"></a>
+
+- *Type:* cdk8s-pipelines.ParameterBuilder
+
+---
+
+##### `withWorkspace` <a name="withWorkspace" id="cdk8s-pipelines-lib.IbmPak02.withWorkspace"></a>
+
+```typescript
+public withWorkspace(workspace: WorkspaceBuilder): TaskBuilder
+```
+
+Adds the specified workspace to the `Task`.
+
+###### `workspace`<sup>Required</sup> <a name="workspace" id="cdk8s-pipelines-lib.IbmPak02.withWorkspace.parameter.workspace"></a>
+
+- *Type:* cdk8s-pipelines.WorkspaceBuilder
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak02.property.logicalID">logicalID</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak02.property.description">description</a></code> | <code>string</code> | Gets the `description` of the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak02.property.name">name</a></code> | <code>string</code> | Gets the name of the `Task` built by the `TaskBuilder`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak02.property.parameters">parameters</a></code> | <code>cdk8s-pipelines.ParameterBuilder[]</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak02.property.workspaces">workspaces</a></code> | <code>cdk8s-pipelines.WorkspaceBuilder[]</code> | Gets the workspaces for the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPak02.property.delegate">delegate</a></code> | <code>cdk8s-pipelines.TaskBuilder</code> | *No description.* |
+
+---
+
+##### `logicalID`<sup>Required</sup> <a name="logicalID" id="cdk8s-pipelines-lib.IbmPak02.property.logicalID"></a>
+
+```typescript
+public readonly logicalID: string;
+```
+
+- *Type:* string
+
+---
+
+##### `description`<sup>Optional</sup> <a name="description" id="cdk8s-pipelines-lib.IbmPak02.property.description"></a>
+
+```typescript
+public readonly description: string;
+```
+
+- *Type:* string
+
+Gets the `description` of the `Task`.
+
+---
+
+##### `name`<sup>Optional</sup> <a name="name" id="cdk8s-pipelines-lib.IbmPak02.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* string
+
+Gets the name of the `Task` built by the `TaskBuilder`.
+
+---
+
+##### `parameters`<sup>Optional</sup> <a name="parameters" id="cdk8s-pipelines-lib.IbmPak02.property.parameters"></a>
+
+```typescript
+public readonly parameters: ParameterBuilder[];
+```
+
+- *Type:* cdk8s-pipelines.ParameterBuilder[]
+
+---
+
+##### `workspaces`<sup>Optional</sup> <a name="workspaces" id="cdk8s-pipelines-lib.IbmPak02.property.workspaces"></a>
+
+```typescript
+public readonly workspaces: WorkspaceBuilder[];
+```
+
+- *Type:* cdk8s-pipelines.WorkspaceBuilder[]
+
+Gets the workspaces for the `Task`.
+
+---
+
+##### `delegate`<sup>Required</sup> <a name="delegate" id="cdk8s-pipelines-lib.IbmPak02.property.delegate"></a>
+
+```typescript
+public readonly delegate: TaskBuilder;
+```
+
+- *Type:* cdk8s-pipelines.TaskBuilder
+
+---
+
+
+### IbmPakApplyCatalogSource01 <a name="IbmPakApplyCatalogSource01" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01"></a>
+
+#### Initializers <a name="Initializers" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.Initializer"></a>
+
+```typescript
+import { IbmPakApplyCatalogSource01 } from 'cdk8s-pipelines-lib'
+
+new IbmPakApplyCatalogSource01(scope: Construct, id: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.buildTask">buildTask</a></code> | Builds the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withAnnotation">withAnnotation</a></code> | Adds an annotation to the `Task` `metadata` with the provided key and value. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withDescription">withDescription</a></code> | Sets the `description` of the `Task` being built. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withLabel">withLabel</a></code> | Adds a label to the `Task` with the provided label key and value. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withName">withName</a></code> | Sets the name of the `Task` being built. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withResult">withResult</a></code> | Allows you to add an result to the Task. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withStep">withStep</a></code> | Adds the given `step` (`TaskStepBuilder`) to the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withStringParam">withStringParam</a></code> | Adds a parameter of type string to the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withWorkspace">withWorkspace</a></code> | Adds the specified workspace to the `Task`. |
+
+---
+
+##### `buildTask` <a name="buildTask" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.buildTask"></a>
+
+```typescript
+public buildTask(): void
+```
+
+Builds the `Task`.
+
+##### `withAnnotation` <a name="withAnnotation" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withAnnotation"></a>
+
+```typescript
+public withAnnotation(key: string, value: string): TaskBuilder
+```
+
+Adds an annotation to the `Task` `metadata` with the provided key and value.
+
+> [https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
+
+###### `key`<sup>Required</sup> <a name="key" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withAnnotation.parameter.key"></a>
+
+- *Type:* string
+
+The annotation's key.
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withAnnotation.parameter.value"></a>
+
+- *Type:* string
+
+The annotation's value.
+
+---
+
+##### `withDescription` <a name="withDescription" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withDescription"></a>
+
+```typescript
+public withDescription(description: string): TaskBuilder
+```
+
+Sets the `description` of the `Task` being built.
+
+###### `description`<sup>Required</sup> <a name="description" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withDescription.parameter.description"></a>
+
+- *Type:* string
+
+---
+
+##### `withLabel` <a name="withLabel" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withLabel"></a>
+
+```typescript
+public withLabel(key: string, value: string): TaskBuilder
+```
+
+Adds a label to the `Task` with the provided label key and value.
+
+> [https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
+
+###### `key`<sup>Required</sup> <a name="key" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withLabel.parameter.key"></a>
+
+- *Type:* string
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withLabel.parameter.value"></a>
+
+- *Type:* string
+
+---
+
+##### `withName` <a name="withName" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withName"></a>
+
+```typescript
+public withName(name: string): TaskBuilder
+```
+
+Sets the name of the `Task` being built.
+
+###### `name`<sup>Required</sup> <a name="name" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withName.parameter.name"></a>
+
+- *Type:* string
+
+---
+
+##### `withResult` <a name="withResult" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withResult"></a>
+
+```typescript
+public withResult(name: string, description: string): TaskBuilder
+```
+
+Allows you to add an result to the Task.
+
+> [https://tekton.dev/docs/pipelines/tasks/#emitting-results](https://tekton.dev/docs/pipelines/tasks/#emitting-results)
+
+###### `name`<sup>Required</sup> <a name="name" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withResult.parameter.name"></a>
+
+- *Type:* string
+
+The name of the result.
+
+---
+
+###### `description`<sup>Required</sup> <a name="description" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withResult.parameter.description"></a>
+
+- *Type:* string
+
+The result's description.
+
+---
+
+##### `withStep` <a name="withStep" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withStep"></a>
+
+```typescript
+public withStep(step: TaskStepBuilder): TaskBuilder
+```
+
+Adds the given `step` (`TaskStepBuilder`) to the `Task`.
+
+###### `step`<sup>Required</sup> <a name="step" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withStep.parameter.step"></a>
+
+- *Type:* cdk8s-pipelines.TaskStepBuilder
+
+---
+
+##### `withStringParam` <a name="withStringParam" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withStringParam"></a>
+
+```typescript
+public withStringParam(param: ParameterBuilder): TaskBuilder
+```
+
+Adds a parameter of type string to the `Task`.
+
+###### `param`<sup>Required</sup> <a name="param" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withStringParam.parameter.param"></a>
+
+- *Type:* cdk8s-pipelines.ParameterBuilder
+
+---
+
+##### `withWorkspace` <a name="withWorkspace" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withWorkspace"></a>
+
+```typescript
+public withWorkspace(workspace: WorkspaceBuilder): TaskBuilder
+```
+
+Adds the specified workspace to the `Task`.
+
+###### `workspace`<sup>Required</sup> <a name="workspace" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.withWorkspace.parameter.workspace"></a>
+
+- *Type:* cdk8s-pipelines.WorkspaceBuilder
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.property.logicalID">logicalID</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.property.description">description</a></code> | <code>string</code> | Gets the `description` of the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.property.name">name</a></code> | <code>string</code> | Gets the name of the `Task` built by the `TaskBuilder`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.property.parameters">parameters</a></code> | <code>cdk8s-pipelines.ParameterBuilder[]</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.property.workspaces">workspaces</a></code> | <code>cdk8s-pipelines.WorkspaceBuilder[]</code> | Gets the workspaces for the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.property.delegate">delegate</a></code> | <code>cdk8s-pipelines.TaskBuilder</code> | *No description.* |
+
+---
+
+##### `logicalID`<sup>Required</sup> <a name="logicalID" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.property.logicalID"></a>
+
+```typescript
+public readonly logicalID: string;
+```
+
+- *Type:* string
+
+---
+
+##### `description`<sup>Optional</sup> <a name="description" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.property.description"></a>
+
+```typescript
+public readonly description: string;
+```
+
+- *Type:* string
+
+Gets the `description` of the `Task`.
+
+---
+
+##### `name`<sup>Optional</sup> <a name="name" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* string
+
+Gets the name of the `Task` built by the `TaskBuilder`.
+
+---
+
+##### `parameters`<sup>Optional</sup> <a name="parameters" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.property.parameters"></a>
+
+```typescript
+public readonly parameters: ParameterBuilder[];
+```
+
+- *Type:* cdk8s-pipelines.ParameterBuilder[]
+
+---
+
+##### `workspaces`<sup>Optional</sup> <a name="workspaces" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.property.workspaces"></a>
+
+```typescript
+public readonly workspaces: WorkspaceBuilder[];
+```
+
+- *Type:* cdk8s-pipelines.WorkspaceBuilder[]
+
+Gets the workspaces for the `Task`.
+
+---
+
+##### `delegate`<sup>Required</sup> <a name="delegate" id="cdk8s-pipelines-lib.IbmPakApplyCatalogSource01.property.delegate"></a>
+
+```typescript
+public readonly delegate: TaskBuilder;
+```
+
+- *Type:* cdk8s-pipelines.TaskBuilder
+
+---
+
+
+### IbmPakInstallOperator01 <a name="IbmPakInstallOperator01" id="cdk8s-pipelines-lib.IbmPakInstallOperator01"></a>
+
+#### Initializers <a name="Initializers" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.Initializer"></a>
+
+```typescript
+import { IbmPakInstallOperator01 } from 'cdk8s-pipelines-lib'
+
+new IbmPakInstallOperator01(scope: Construct, id: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakInstallOperator01.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakInstallOperator01.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakInstallOperator01.buildTask">buildTask</a></code> | Builds the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakInstallOperator01.withAnnotation">withAnnotation</a></code> | Adds an annotation to the `Task` `metadata` with the provided key and value. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakInstallOperator01.withDescription">withDescription</a></code> | Sets the `description` of the `Task` being built. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakInstallOperator01.withLabel">withLabel</a></code> | Adds a label to the `Task` with the provided label key and value. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakInstallOperator01.withName">withName</a></code> | Sets the name of the `Task` being built. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakInstallOperator01.withResult">withResult</a></code> | Allows you to add an result to the Task. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakInstallOperator01.withStep">withStep</a></code> | Adds the given `step` (`TaskStepBuilder`) to the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakInstallOperator01.withStringParam">withStringParam</a></code> | Adds a parameter of type string to the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakInstallOperator01.withWorkspace">withWorkspace</a></code> | Adds the specified workspace to the `Task`. |
+
+---
+
+##### `buildTask` <a name="buildTask" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.buildTask"></a>
+
+```typescript
+public buildTask(): void
+```
+
+Builds the `Task`.
+
+##### `withAnnotation` <a name="withAnnotation" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.withAnnotation"></a>
+
+```typescript
+public withAnnotation(key: string, value: string): TaskBuilder
+```
+
+Adds an annotation to the `Task` `metadata` with the provided key and value.
+
+> [https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
+
+###### `key`<sup>Required</sup> <a name="key" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.withAnnotation.parameter.key"></a>
+
+- *Type:* string
+
+The annotation's key.
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.withAnnotation.parameter.value"></a>
+
+- *Type:* string
+
+The annotation's value.
+
+---
+
+##### `withDescription` <a name="withDescription" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.withDescription"></a>
+
+```typescript
+public withDescription(description: string): TaskBuilder
+```
+
+Sets the `description` of the `Task` being built.
+
+###### `description`<sup>Required</sup> <a name="description" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.withDescription.parameter.description"></a>
+
+- *Type:* string
+
+---
+
+##### `withLabel` <a name="withLabel" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.withLabel"></a>
+
+```typescript
+public withLabel(key: string, value: string): TaskBuilder
+```
+
+Adds a label to the `Task` with the provided label key and value.
+
+> [https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
+
+###### `key`<sup>Required</sup> <a name="key" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.withLabel.parameter.key"></a>
+
+- *Type:* string
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.withLabel.parameter.value"></a>
+
+- *Type:* string
+
+---
+
+##### `withName` <a name="withName" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.withName"></a>
+
+```typescript
+public withName(name: string): TaskBuilder
+```
+
+Sets the name of the `Task` being built.
+
+###### `name`<sup>Required</sup> <a name="name" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.withName.parameter.name"></a>
+
+- *Type:* string
+
+---
+
+##### `withResult` <a name="withResult" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.withResult"></a>
+
+```typescript
+public withResult(name: string, description: string): TaskBuilder
+```
+
+Allows you to add an result to the Task.
+
+> [https://tekton.dev/docs/pipelines/tasks/#emitting-results](https://tekton.dev/docs/pipelines/tasks/#emitting-results)
+
+###### `name`<sup>Required</sup> <a name="name" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.withResult.parameter.name"></a>
+
+- *Type:* string
+
+The name of the result.
+
+---
+
+###### `description`<sup>Required</sup> <a name="description" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.withResult.parameter.description"></a>
+
+- *Type:* string
+
+The result's description.
+
+---
+
+##### `withStep` <a name="withStep" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.withStep"></a>
+
+```typescript
+public withStep(step: TaskStepBuilder): TaskBuilder
+```
+
+Adds the given `step` (`TaskStepBuilder`) to the `Task`.
+
+###### `step`<sup>Required</sup> <a name="step" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.withStep.parameter.step"></a>
+
+- *Type:* cdk8s-pipelines.TaskStepBuilder
+
+---
+
+##### `withStringParam` <a name="withStringParam" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.withStringParam"></a>
+
+```typescript
+public withStringParam(param: ParameterBuilder): TaskBuilder
+```
+
+Adds a parameter of type string to the `Task`.
+
+###### `param`<sup>Required</sup> <a name="param" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.withStringParam.parameter.param"></a>
+
+- *Type:* cdk8s-pipelines.ParameterBuilder
+
+---
+
+##### `withWorkspace` <a name="withWorkspace" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.withWorkspace"></a>
+
+```typescript
+public withWorkspace(workspace: WorkspaceBuilder): TaskBuilder
+```
+
+Adds the specified workspace to the `Task`.
+
+###### `workspace`<sup>Required</sup> <a name="workspace" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.withWorkspace.parameter.workspace"></a>
+
+- *Type:* cdk8s-pipelines.WorkspaceBuilder
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakInstallOperator01.property.logicalID">logicalID</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakInstallOperator01.property.description">description</a></code> | <code>string</code> | Gets the `description` of the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakInstallOperator01.property.name">name</a></code> | <code>string</code> | Gets the name of the `Task` built by the `TaskBuilder`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakInstallOperator01.property.parameters">parameters</a></code> | <code>cdk8s-pipelines.ParameterBuilder[]</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakInstallOperator01.property.workspaces">workspaces</a></code> | <code>cdk8s-pipelines.WorkspaceBuilder[]</code> | Gets the workspaces for the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.IbmPakInstallOperator01.property.delegate">delegate</a></code> | <code>cdk8s-pipelines.TaskBuilder</code> | *No description.* |
+
+---
+
+##### `logicalID`<sup>Required</sup> <a name="logicalID" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.property.logicalID"></a>
+
+```typescript
+public readonly logicalID: string;
+```
+
+- *Type:* string
+
+---
+
+##### `description`<sup>Optional</sup> <a name="description" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.property.description"></a>
+
+```typescript
+public readonly description: string;
+```
+
+- *Type:* string
+
+Gets the `description` of the `Task`.
+
+---
+
+##### `name`<sup>Optional</sup> <a name="name" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* string
+
+Gets the name of the `Task` built by the `TaskBuilder`.
+
+---
+
+##### `parameters`<sup>Optional</sup> <a name="parameters" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.property.parameters"></a>
+
+```typescript
+public readonly parameters: ParameterBuilder[];
+```
+
+- *Type:* cdk8s-pipelines.ParameterBuilder[]
+
+---
+
+##### `workspaces`<sup>Optional</sup> <a name="workspaces" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.property.workspaces"></a>
+
+```typescript
+public readonly workspaces: WorkspaceBuilder[];
+```
+
+- *Type:* cdk8s-pipelines.WorkspaceBuilder[]
+
+Gets the workspaces for the `Task`.
+
+---
+
+##### `delegate`<sup>Required</sup> <a name="delegate" id="cdk8s-pipelines-lib.IbmPakInstallOperator01.property.delegate"></a>
+
+```typescript
+public readonly delegate: TaskBuilder;
+```
+
+- *Type:* cdk8s-pipelines.TaskBuilder
+
+---
 
 
 ### InstallFromIBMOperatorPipeline <a name="InstallFromIBMOperatorPipeline" id="cdk8s-pipelines-lib.InstallFromIBMOperatorPipeline"></a>
@@ -784,6 +3286,562 @@ This is an "expensive" get because it loops through the workspaces in the
 pipeline and checks for duplicates in the pipeline workspaces for each task
 workspace found. You should avoid calling this in a loop--instead, declare
 a local variable before the loop and reference that instead.
+
+---
+
+
+### KustomizeCli01 <a name="KustomizeCli01" id="cdk8s-pipelines-lib.KustomizeCli01"></a>
+
+#### Initializers <a name="Initializers" id="cdk8s-pipelines-lib.KustomizeCli01.Initializer"></a>
+
+```typescript
+import { KustomizeCli01 } from 'cdk8s-pipelines-lib'
+
+new KustomizeCli01(scope: Construct, id: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.KustomizeCli01.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.KustomizeCli01.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="cdk8s-pipelines-lib.KustomizeCli01.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="cdk8s-pipelines-lib.KustomizeCli01.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.KustomizeCli01.buildTask">buildTask</a></code> | Builds the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.KustomizeCli01.withAnnotation">withAnnotation</a></code> | Adds an annotation to the `Task` `metadata` with the provided key and value. |
+| <code><a href="#cdk8s-pipelines-lib.KustomizeCli01.withDescription">withDescription</a></code> | Sets the `description` of the `Task` being built. |
+| <code><a href="#cdk8s-pipelines-lib.KustomizeCli01.withLabel">withLabel</a></code> | Adds a label to the `Task` with the provided label key and value. |
+| <code><a href="#cdk8s-pipelines-lib.KustomizeCli01.withName">withName</a></code> | Sets the name of the `Task` being built. |
+| <code><a href="#cdk8s-pipelines-lib.KustomizeCli01.withResult">withResult</a></code> | Allows you to add an result to the Task. |
+| <code><a href="#cdk8s-pipelines-lib.KustomizeCli01.withStep">withStep</a></code> | Adds the given `step` (`TaskStepBuilder`) to the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.KustomizeCli01.withStringParam">withStringParam</a></code> | Adds a parameter of type string to the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.KustomizeCli01.withWorkspace">withWorkspace</a></code> | Adds the specified workspace to the `Task`. |
+
+---
+
+##### `buildTask` <a name="buildTask" id="cdk8s-pipelines-lib.KustomizeCli01.buildTask"></a>
+
+```typescript
+public buildTask(): void
+```
+
+Builds the `Task`.
+
+##### `withAnnotation` <a name="withAnnotation" id="cdk8s-pipelines-lib.KustomizeCli01.withAnnotation"></a>
+
+```typescript
+public withAnnotation(key: string, value: string): TaskBuilder
+```
+
+Adds an annotation to the `Task` `metadata` with the provided key and value.
+
+> [https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
+
+###### `key`<sup>Required</sup> <a name="key" id="cdk8s-pipelines-lib.KustomizeCli01.withAnnotation.parameter.key"></a>
+
+- *Type:* string
+
+The annotation's key.
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="cdk8s-pipelines-lib.KustomizeCli01.withAnnotation.parameter.value"></a>
+
+- *Type:* string
+
+The annotation's value.
+
+---
+
+##### `withDescription` <a name="withDescription" id="cdk8s-pipelines-lib.KustomizeCli01.withDescription"></a>
+
+```typescript
+public withDescription(description: string): TaskBuilder
+```
+
+Sets the `description` of the `Task` being built.
+
+###### `description`<sup>Required</sup> <a name="description" id="cdk8s-pipelines-lib.KustomizeCli01.withDescription.parameter.description"></a>
+
+- *Type:* string
+
+---
+
+##### `withLabel` <a name="withLabel" id="cdk8s-pipelines-lib.KustomizeCli01.withLabel"></a>
+
+```typescript
+public withLabel(key: string, value: string): TaskBuilder
+```
+
+Adds a label to the `Task` with the provided label key and value.
+
+> [https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
+
+###### `key`<sup>Required</sup> <a name="key" id="cdk8s-pipelines-lib.KustomizeCli01.withLabel.parameter.key"></a>
+
+- *Type:* string
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="cdk8s-pipelines-lib.KustomizeCli01.withLabel.parameter.value"></a>
+
+- *Type:* string
+
+---
+
+##### `withName` <a name="withName" id="cdk8s-pipelines-lib.KustomizeCli01.withName"></a>
+
+```typescript
+public withName(name: string): TaskBuilder
+```
+
+Sets the name of the `Task` being built.
+
+###### `name`<sup>Required</sup> <a name="name" id="cdk8s-pipelines-lib.KustomizeCli01.withName.parameter.name"></a>
+
+- *Type:* string
+
+---
+
+##### `withResult` <a name="withResult" id="cdk8s-pipelines-lib.KustomizeCli01.withResult"></a>
+
+```typescript
+public withResult(name: string, description: string): TaskBuilder
+```
+
+Allows you to add an result to the Task.
+
+> [https://tekton.dev/docs/pipelines/tasks/#emitting-results](https://tekton.dev/docs/pipelines/tasks/#emitting-results)
+
+###### `name`<sup>Required</sup> <a name="name" id="cdk8s-pipelines-lib.KustomizeCli01.withResult.parameter.name"></a>
+
+- *Type:* string
+
+The name of the result.
+
+---
+
+###### `description`<sup>Required</sup> <a name="description" id="cdk8s-pipelines-lib.KustomizeCli01.withResult.parameter.description"></a>
+
+- *Type:* string
+
+The result's description.
+
+---
+
+##### `withStep` <a name="withStep" id="cdk8s-pipelines-lib.KustomizeCli01.withStep"></a>
+
+```typescript
+public withStep(step: TaskStepBuilder): TaskBuilder
+```
+
+Adds the given `step` (`TaskStepBuilder`) to the `Task`.
+
+###### `step`<sup>Required</sup> <a name="step" id="cdk8s-pipelines-lib.KustomizeCli01.withStep.parameter.step"></a>
+
+- *Type:* cdk8s-pipelines.TaskStepBuilder
+
+---
+
+##### `withStringParam` <a name="withStringParam" id="cdk8s-pipelines-lib.KustomizeCli01.withStringParam"></a>
+
+```typescript
+public withStringParam(param: ParameterBuilder): TaskBuilder
+```
+
+Adds a parameter of type string to the `Task`.
+
+###### `param`<sup>Required</sup> <a name="param" id="cdk8s-pipelines-lib.KustomizeCli01.withStringParam.parameter.param"></a>
+
+- *Type:* cdk8s-pipelines.ParameterBuilder
+
+---
+
+##### `withWorkspace` <a name="withWorkspace" id="cdk8s-pipelines-lib.KustomizeCli01.withWorkspace"></a>
+
+```typescript
+public withWorkspace(workspace: WorkspaceBuilder): TaskBuilder
+```
+
+Adds the specified workspace to the `Task`.
+
+###### `workspace`<sup>Required</sup> <a name="workspace" id="cdk8s-pipelines-lib.KustomizeCli01.withWorkspace.parameter.workspace"></a>
+
+- *Type:* cdk8s-pipelines.WorkspaceBuilder
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.KustomizeCli01.property.logicalID">logicalID</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.KustomizeCli01.property.description">description</a></code> | <code>string</code> | Gets the `description` of the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.KustomizeCli01.property.name">name</a></code> | <code>string</code> | Gets the name of the `Task` built by the `TaskBuilder`. |
+| <code><a href="#cdk8s-pipelines-lib.KustomizeCli01.property.parameters">parameters</a></code> | <code>cdk8s-pipelines.ParameterBuilder[]</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.KustomizeCli01.property.workspaces">workspaces</a></code> | <code>cdk8s-pipelines.WorkspaceBuilder[]</code> | Gets the workspaces for the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.KustomizeCli01.property.delegate">delegate</a></code> | <code>cdk8s-pipelines.TaskBuilder</code> | *No description.* |
+
+---
+
+##### `logicalID`<sup>Required</sup> <a name="logicalID" id="cdk8s-pipelines-lib.KustomizeCli01.property.logicalID"></a>
+
+```typescript
+public readonly logicalID: string;
+```
+
+- *Type:* string
+
+---
+
+##### `description`<sup>Optional</sup> <a name="description" id="cdk8s-pipelines-lib.KustomizeCli01.property.description"></a>
+
+```typescript
+public readonly description: string;
+```
+
+- *Type:* string
+
+Gets the `description` of the `Task`.
+
+---
+
+##### `name`<sup>Optional</sup> <a name="name" id="cdk8s-pipelines-lib.KustomizeCli01.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* string
+
+Gets the name of the `Task` built by the `TaskBuilder`.
+
+---
+
+##### `parameters`<sup>Optional</sup> <a name="parameters" id="cdk8s-pipelines-lib.KustomizeCli01.property.parameters"></a>
+
+```typescript
+public readonly parameters: ParameterBuilder[];
+```
+
+- *Type:* cdk8s-pipelines.ParameterBuilder[]
+
+---
+
+##### `workspaces`<sup>Optional</sup> <a name="workspaces" id="cdk8s-pipelines-lib.KustomizeCli01.property.workspaces"></a>
+
+```typescript
+public readonly workspaces: WorkspaceBuilder[];
+```
+
+- *Type:* cdk8s-pipelines.WorkspaceBuilder[]
+
+Gets the workspaces for the `Task`.
+
+---
+
+##### `delegate`<sup>Required</sup> <a name="delegate" id="cdk8s-pipelines-lib.KustomizeCli01.property.delegate"></a>
+
+```typescript
+public readonly delegate: TaskBuilder;
+```
+
+- *Type:* cdk8s-pipelines.TaskBuilder
+
+---
+
+
+### OpenshiftClient02 <a name="OpenshiftClient02" id="cdk8s-pipelines-lib.OpenshiftClient02"></a>
+
+#### Initializers <a name="Initializers" id="cdk8s-pipelines-lib.OpenshiftClient02.Initializer"></a>
+
+```typescript
+import { OpenshiftClient02 } from 'cdk8s-pipelines-lib'
+
+new OpenshiftClient02(scope: Construct, id: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.OpenshiftClient02.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.OpenshiftClient02.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="cdk8s-pipelines-lib.OpenshiftClient02.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="cdk8s-pipelines-lib.OpenshiftClient02.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.OpenshiftClient02.buildTask">buildTask</a></code> | Builds the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.OpenshiftClient02.withAnnotation">withAnnotation</a></code> | Adds an annotation to the `Task` `metadata` with the provided key and value. |
+| <code><a href="#cdk8s-pipelines-lib.OpenshiftClient02.withDescription">withDescription</a></code> | Sets the `description` of the `Task` being built. |
+| <code><a href="#cdk8s-pipelines-lib.OpenshiftClient02.withLabel">withLabel</a></code> | Adds a label to the `Task` with the provided label key and value. |
+| <code><a href="#cdk8s-pipelines-lib.OpenshiftClient02.withName">withName</a></code> | Sets the name of the `Task` being built. |
+| <code><a href="#cdk8s-pipelines-lib.OpenshiftClient02.withResult">withResult</a></code> | Allows you to add an result to the Task. |
+| <code><a href="#cdk8s-pipelines-lib.OpenshiftClient02.withStep">withStep</a></code> | Adds the given `step` (`TaskStepBuilder`) to the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.OpenshiftClient02.withStringParam">withStringParam</a></code> | Adds a parameter of type string to the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.OpenshiftClient02.withWorkspace">withWorkspace</a></code> | Adds the specified workspace to the `Task`. |
+
+---
+
+##### `buildTask` <a name="buildTask" id="cdk8s-pipelines-lib.OpenshiftClient02.buildTask"></a>
+
+```typescript
+public buildTask(): void
+```
+
+Builds the `Task`.
+
+##### `withAnnotation` <a name="withAnnotation" id="cdk8s-pipelines-lib.OpenshiftClient02.withAnnotation"></a>
+
+```typescript
+public withAnnotation(key: string, value: string): TaskBuilder
+```
+
+Adds an annotation to the `Task` `metadata` with the provided key and value.
+
+> [https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
+
+###### `key`<sup>Required</sup> <a name="key" id="cdk8s-pipelines-lib.OpenshiftClient02.withAnnotation.parameter.key"></a>
+
+- *Type:* string
+
+The annotation's key.
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="cdk8s-pipelines-lib.OpenshiftClient02.withAnnotation.parameter.value"></a>
+
+- *Type:* string
+
+The annotation's value.
+
+---
+
+##### `withDescription` <a name="withDescription" id="cdk8s-pipelines-lib.OpenshiftClient02.withDescription"></a>
+
+```typescript
+public withDescription(description: string): TaskBuilder
+```
+
+Sets the `description` of the `Task` being built.
+
+###### `description`<sup>Required</sup> <a name="description" id="cdk8s-pipelines-lib.OpenshiftClient02.withDescription.parameter.description"></a>
+
+- *Type:* string
+
+---
+
+##### `withLabel` <a name="withLabel" id="cdk8s-pipelines-lib.OpenshiftClient02.withLabel"></a>
+
+```typescript
+public withLabel(key: string, value: string): TaskBuilder
+```
+
+Adds a label to the `Task` with the provided label key and value.
+
+> [https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
+
+###### `key`<sup>Required</sup> <a name="key" id="cdk8s-pipelines-lib.OpenshiftClient02.withLabel.parameter.key"></a>
+
+- *Type:* string
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="cdk8s-pipelines-lib.OpenshiftClient02.withLabel.parameter.value"></a>
+
+- *Type:* string
+
+---
+
+##### `withName` <a name="withName" id="cdk8s-pipelines-lib.OpenshiftClient02.withName"></a>
+
+```typescript
+public withName(name: string): TaskBuilder
+```
+
+Sets the name of the `Task` being built.
+
+###### `name`<sup>Required</sup> <a name="name" id="cdk8s-pipelines-lib.OpenshiftClient02.withName.parameter.name"></a>
+
+- *Type:* string
+
+---
+
+##### `withResult` <a name="withResult" id="cdk8s-pipelines-lib.OpenshiftClient02.withResult"></a>
+
+```typescript
+public withResult(name: string, description: string): TaskBuilder
+```
+
+Allows you to add an result to the Task.
+
+> [https://tekton.dev/docs/pipelines/tasks/#emitting-results](https://tekton.dev/docs/pipelines/tasks/#emitting-results)
+
+###### `name`<sup>Required</sup> <a name="name" id="cdk8s-pipelines-lib.OpenshiftClient02.withResult.parameter.name"></a>
+
+- *Type:* string
+
+The name of the result.
+
+---
+
+###### `description`<sup>Required</sup> <a name="description" id="cdk8s-pipelines-lib.OpenshiftClient02.withResult.parameter.description"></a>
+
+- *Type:* string
+
+The result's description.
+
+---
+
+##### `withStep` <a name="withStep" id="cdk8s-pipelines-lib.OpenshiftClient02.withStep"></a>
+
+```typescript
+public withStep(step: TaskStepBuilder): TaskBuilder
+```
+
+Adds the given `step` (`TaskStepBuilder`) to the `Task`.
+
+###### `step`<sup>Required</sup> <a name="step" id="cdk8s-pipelines-lib.OpenshiftClient02.withStep.parameter.step"></a>
+
+- *Type:* cdk8s-pipelines.TaskStepBuilder
+
+---
+
+##### `withStringParam` <a name="withStringParam" id="cdk8s-pipelines-lib.OpenshiftClient02.withStringParam"></a>
+
+```typescript
+public withStringParam(param: ParameterBuilder): TaskBuilder
+```
+
+Adds a parameter of type string to the `Task`.
+
+###### `param`<sup>Required</sup> <a name="param" id="cdk8s-pipelines-lib.OpenshiftClient02.withStringParam.parameter.param"></a>
+
+- *Type:* cdk8s-pipelines.ParameterBuilder
+
+---
+
+##### `withWorkspace` <a name="withWorkspace" id="cdk8s-pipelines-lib.OpenshiftClient02.withWorkspace"></a>
+
+```typescript
+public withWorkspace(workspace: WorkspaceBuilder): TaskBuilder
+```
+
+Adds the specified workspace to the `Task`.
+
+###### `workspace`<sup>Required</sup> <a name="workspace" id="cdk8s-pipelines-lib.OpenshiftClient02.withWorkspace.parameter.workspace"></a>
+
+- *Type:* cdk8s-pipelines.WorkspaceBuilder
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk8s-pipelines-lib.OpenshiftClient02.property.logicalID">logicalID</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.OpenshiftClient02.property.description">description</a></code> | <code>string</code> | Gets the `description` of the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.OpenshiftClient02.property.name">name</a></code> | <code>string</code> | Gets the name of the `Task` built by the `TaskBuilder`. |
+| <code><a href="#cdk8s-pipelines-lib.OpenshiftClient02.property.parameters">parameters</a></code> | <code>cdk8s-pipelines.ParameterBuilder[]</code> | *No description.* |
+| <code><a href="#cdk8s-pipelines-lib.OpenshiftClient02.property.workspaces">workspaces</a></code> | <code>cdk8s-pipelines.WorkspaceBuilder[]</code> | Gets the workspaces for the `Task`. |
+| <code><a href="#cdk8s-pipelines-lib.OpenshiftClient02.property.delegate">delegate</a></code> | <code>cdk8s-pipelines.TaskBuilder</code> | *No description.* |
+
+---
+
+##### `logicalID`<sup>Required</sup> <a name="logicalID" id="cdk8s-pipelines-lib.OpenshiftClient02.property.logicalID"></a>
+
+```typescript
+public readonly logicalID: string;
+```
+
+- *Type:* string
+
+---
+
+##### `description`<sup>Optional</sup> <a name="description" id="cdk8s-pipelines-lib.OpenshiftClient02.property.description"></a>
+
+```typescript
+public readonly description: string;
+```
+
+- *Type:* string
+
+Gets the `description` of the `Task`.
+
+---
+
+##### `name`<sup>Optional</sup> <a name="name" id="cdk8s-pipelines-lib.OpenshiftClient02.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* string
+
+Gets the name of the `Task` built by the `TaskBuilder`.
+
+---
+
+##### `parameters`<sup>Optional</sup> <a name="parameters" id="cdk8s-pipelines-lib.OpenshiftClient02.property.parameters"></a>
+
+```typescript
+public readonly parameters: ParameterBuilder[];
+```
+
+- *Type:* cdk8s-pipelines.ParameterBuilder[]
+
+---
+
+##### `workspaces`<sup>Optional</sup> <a name="workspaces" id="cdk8s-pipelines-lib.OpenshiftClient02.property.workspaces"></a>
+
+```typescript
+public readonly workspaces: WorkspaceBuilder[];
+```
+
+- *Type:* cdk8s-pipelines.WorkspaceBuilder[]
+
+Gets the workspaces for the `Task`.
+
+---
+
+##### `delegate`<sup>Required</sup> <a name="delegate" id="cdk8s-pipelines-lib.OpenshiftClient02.property.delegate"></a>
+
+```typescript
+public readonly delegate: TaskBuilder;
+```
+
+- *Type:* cdk8s-pipelines.TaskBuilder
 
 ---
 

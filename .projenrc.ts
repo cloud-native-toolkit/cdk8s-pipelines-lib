@@ -14,6 +14,8 @@ const project = new cdk8s.ConstructLibraryCdk8s({
   bundledDeps: [
     'octokit',
     'axios',
+    'simple-git',
+    'handlebars',
   ],
   peerDeps: [
     'cdk8s',
@@ -31,8 +33,11 @@ const project = new cdk8s.ConstructLibraryCdk8s({
   ],
   gitignore: [
     '.idea/',
+    'cache/',
+    'src/deployerTektonTasks/generatedDeployerTasks.ts',
   ],
 });
 // Create the tekton hub tasks
 project.projectBuild.preCompileTask.exec('npx ts-node src/tektonHub/CreateTektonHubLink.ts');
+project.projectBuild.preCompileTask.exec('npx ts-node src/deployerTektonTasks/CreateDeployerRepoLink.ts');
 project.synth();
